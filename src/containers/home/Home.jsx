@@ -1,7 +1,10 @@
+import { Container } from "@mui/material"
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <Container>
+      Home
+    </Container>
   )
 }
 
