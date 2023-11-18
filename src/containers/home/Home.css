@@ -1,3 +1,10 @@
-* {
-  margin: 0;
+.container-home .carousel-item {
+  display: flex;
+}
+
+@media (max-width: 480px) {
+  .container-home .carousel-item {
+    background-color: aqua;
+    display: none;
+  }
 }/*# sourceMappingURL=Home.css.map */
