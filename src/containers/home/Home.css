@@ -1,8 +1,69 @@
+.container-home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .container-home .carousel-item {
   display: flex;
 }
+.container-home .container-home_accion {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  transform: translateY(-10%);
+  z-index: 2;
+  height: 400px;
+}
+.container-home .container-home_accion img {
+  margin: 0 30px 0 30px;
+}
+.container-home .container-home_accion .box-imag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  gap: 5;
+}
+.container-home .dog-eating {
+  width: 25%;
+}
 
-@media (max-width: 480px) {
+@media (max-width: 960px) {
+  .container-home .container-home_accion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    gap: 0;
+    margin: auto;
+    padding: 0;
+    transform: translateY(-5%);
+    height: 100%;
+  }
+  .container-home .container-home_accion img {
+    width: 100%;
+    height: 350px;
+    margin: 0px;
+    padding: 0;
+    gap: 0;
+    top: 0;
+  }
+  .container-home .container-home_accion .box-imag {
+    gap: 0;
+  }
+  .container-home .dog-eating {
+    margin: 10%;
+    width: 80%;
+    height: 700px;
+  }
+}
+@media (max-width: 600px) {
   .container-home .carousel-item {
     background-color: aqua;
     display: none;

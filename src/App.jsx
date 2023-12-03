@@ -7,13 +7,21 @@ import Home from './containers/home/Home'
 import Services from './containers/services/Services'
 import Products from './containers/products/Products'
 import Contact from './containers/contact/Contact'
+import ProductList from './components/productList/ProductList'
 
 function App() {
 
+  // const products = [
+  //   { id: 1, name: 'Producto 1' },
+  //   { id: 2, name: 'Producto 2' },
+  //   // ...otros productos
+  // ];
+  
   return (
     <BrowserRouter>
     <Container sx={{mt: 5}}>
       <Header/>
+      {/* <ProductList products={products}/> */}
     </Container>
 
     <Routes>

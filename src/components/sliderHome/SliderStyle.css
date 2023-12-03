@@ -1,10 +1,10 @@
 .carousel-root {
   display: flex;
   flex-direction: row;
-  position: absolute;
-  top: 0px;
-  height: 100vh;
+  position: relative;
+  margin-top: -40px;
   background-image: url("../../images/pattern-bg.png");
+  height: 100%;
 }
 .carousel-root .carousel-item {
   bottom: 80px;
@@ -90,7 +90,7 @@
     height: 100vh;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .carousel-root .carousel-item {
     display: none;
   }
