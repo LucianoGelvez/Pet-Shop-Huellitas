@@ -16,6 +16,7 @@ import MainCard from '../../components/card/MainCard.jsx';
 import Discounts from '../../components/discounts/Discounts.jsx';
 import Comments from '../../components/comments/Comments.jsx';
 import Brands from '../../components/brands/Brands.jsx';
+import Footer from '../../components/footer/Footer.jsx';
 
 const Home = () => {
 
@@ -235,6 +236,7 @@ const Home = () => {
       <Discounts />
       <Comments />
       <Brands/>
+      <Footer/>
     </Box>
   );
 };

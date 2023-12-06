@@ -1,17 +1,34 @@
 import NavListDraver from "./NavListDrawer"
 import { AppBar, Box, Button, Drawer, IconButton, Toolbar, Typography } from "@mui/material"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import MenuIcon from "@mui/icons-material/Menu"
-// import HomeIcon from '@mui/icons-material/Home';
 import { NavLink } from 'react-router-dom'
 import Avatar from '@mui/material/Avatar';
 import Logo from '../../images/icons/pet.png'
-// import patternBg from '../../images/pattern-bg.png'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-// import AddIcCallIcon from '@mui/icons-material/AddIcCall';
 
 const Header = () => {
   const [open, setOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    const scrollThreshold = 100;
+    
+    if (scrollPosition > scrollThreshold) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  }
+
+  useEffect(()=> {
+    window.addEventListener("scroll", handleScroll);
+    
+    return ()=> {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   const navLinks = [
     {
@@ -30,7 +47,10 @@ const Header = () => {
   ]
   return (
     <>
-      <AppBar sx={{ backgroundColor: 'rgba(0, 0, 0, 0)', boxShadow: "none"}} >
+      <AppBar position="fixed"   sx={{
+          backgroundColor: isScrolled ? '#fffae7' : 'rgba(0, 0, 0, 0)',
+          boxShadow: isScrolled ? "0px 1px 5px rgba(0, 0, 0, 0.2)" : "none",
+        }} >
       <Toolbar sx={{ justifyContent: 'space-around', backgroundColor: 'rgba(0, 0, 0, 0)' }}>
           <Avatar alt="Logo" src={Logo} />
           <IconButton sx={{ display: { xs: "flex", sm: "none" } }} color="inherit" size="large">

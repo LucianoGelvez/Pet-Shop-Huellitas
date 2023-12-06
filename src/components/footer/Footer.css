@@ -1,3 +1,83 @@
-* {
-  margin: 0;
+.container-footer {
+  background-color: #232121;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -70px;
+}
+.container-footer .container-footer_main {
+  display: flex;
+  width: 70vw;
+  justify-content: space-between;
+  border-bottom: 2px solid white;
+  padding-bottom: 100px;
+}
+.container-footer .container-footer_main .container-footer_main__icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-footer .container-footer_main .container-footer_main__icons img {
+  width: 80px;
+}
+.container-footer .container-footer_main .container-footer_main__icons .container-footer_main__icons__social-media img {
+  width: 35px;
+  margin: 10px;
+}
+.container-footer .container-footer_main .container-footer_main__internal-link {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.container-footer .container-footer_main .container-footer_main__internal-link .link {
+  margin: 8px;
+  text-decoration: none;
+  color: white;
+}
+.container-footer .container-footer_main .container-footer_main__contact {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.container-footer .container-footer_main .container-footer_main__contact .contact-item {
+  display: flex;
+  align-items: center;
+  margin: 6px;
+}
+.container-footer .container-footer_main .container-footer_main__contact .contact-item img {
+  width: 35px;
+  margin-right: 10px;
+}
+.container-footer .container-footer_info {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  width: 100%;
+  margin: 1%;
+}
+
+@media (max-width: 600px) {
+  .container-footer {
+    margin: -10px;
+  }
+  .container-footer .container-footer_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .container-footer .container-footer_main .container-footer_main__internal-link {
+    margin: 50px;
+  }
+  .container-footer_info {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 900px) {
+  .container-footer .container-footer_main {
+    margin: 20px;
+    width: 90vw;
+  }
 }/*# sourceMappingURL=Footer.css.map */
