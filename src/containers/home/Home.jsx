@@ -235,6 +235,7 @@ const Home = () => {
       </Box>
       <Discounts />
       <Comments />
+      
       <Brands/>
       <Footer/>
     </Box>

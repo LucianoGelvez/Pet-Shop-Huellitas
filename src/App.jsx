@@ -33,7 +33,6 @@ function App() {
         <Route path='/Productos' element={<Products />} />
         <Route path='/Contacto' element={<Contact />} />
       </Routes>
-  
     </BrowserRouter>
   )
 }
