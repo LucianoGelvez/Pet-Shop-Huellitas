@@ -3,8 +3,6 @@ import { Box } from "@mui/system"
 import pets from '../../images/pets.png'
 import medicine from '../../images/medicine.jpg'
 import banner from '../../images/pattern-bg.png'
-import './Service.css'
-// import ControlledAccordions from "../../components/accordion/Accordion"
 import CustomizedAccordions from "../../components/accordion/Accordion"
 import Footer from "../../components/footer/Footer"
 
@@ -37,16 +35,16 @@ const Services = () => {
           <img  style={{ borderRadius: "30px", width:"500px" }} src={medicine} alt="" />
         </Box>
       </Box>
-      <Box>
+      <Box sx={{display: "flex", flexDirection: "column", alignItems:"center"}}>
         <Typography component="h2" variant="h4" textAlign="center">SERVICIOS MÉDICOS</Typography>
         
-        <Typography sx={{margin:"10px", width: {xs: "90vw", md:"80vw"}}}>En Huellitas contamos con un excelente equipo de médicos veterinarios preparados para brindarle a tu mascota la mejor atencion</Typography>
+        <Typography textAlign="center" sx={{margin:"10px", width: {xs: "90vw", md:"80vw"}}}>En Huellitas contamos con un excelente equipo de médicos veterinarios preparados para brindarle a tu mascota la mejor atencion</Typography>
         {/* sx={{marginTop:"10px", width:{xs: "90vw", md:"80vw"}}} */}
         <CustomizedAccordions />
       </Box>
       <Box>
         <Typography component="h2" variant="h4" textAlign="center" m="45px">Nuestro equipo medico</Typography>
-      <Stack flexDirection={{sx: "column", md: "row"}} spacing={5} alignItems="center" alignContent="center" justifyContent="center">
+      <Stack sx={{ width:{xs:"100vw", md:"50vw"}, alignItems:"center", alignContent:"center", justifyContent:"space-around"}} flexDirection={{sx: "column", md: "row"}} spacing={0} >
       <Avatar sx={{width: "150px", height: "150px"}} alt="Remy Sharp" src="https://img.freepik.com/foto-gratis/cerca-veterinario-cuidando-perro_23-2149100227.jpg?w=1380&t=st=1701951441~exp=1701952041~hmac=9e70b8a7ceefa42faeedee8b28d00ed24d845442e893306baf38e673a829c722" />
       <Avatar sx={{width: "150px", height: "150px"}} alt="Travis Howard" src="https://img.freepik.com/foto-gratis/veterinario-bata-laboratorio-pie-establo_1303-31036.jpg?w=1380&t=st=1701951492~exp=1701952092~hmac=c152bc40887a37f5e44abdf8ad155da44750b0452d7885a28f15ca77a52b9e35" />
       <Avatar sx={{width: "150px", height: "150px"}} alt="Cindy Baker" src="https://img.freepik.com/foto-gratis/veterinario-sexo-femenino-feliz-perro-tabla-que-muestra-muestra-thumbup_23-2147928397.jpg?w=740&t=st=1701951537~exp=1701952137~hmac=66a298f72b39d8f8a8df5f95b481f6ad8f3cd85611c842ccb7d953075fa6a0a7" />
