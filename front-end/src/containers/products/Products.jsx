@@ -364,10 +364,10 @@ const Products = () => {
           />
           <Autocomplete
             disablePortal
-            id="filter-by-type" // Cambia el id para que sea único
-            options={[...new Set(products.map((product) => product.type))]} // Filtra categorías duplicadas
+            id="filter-by-type" 
+            options={[...new Set(products.map((product) => product.type))]} 
             sx={{ width: 300, margin: "auto", mb: 5 }}
-            onInputChange={handleTypeChange} // Actualizado para usar handleTypeChange
+            onInputChange={handleTypeChange} 
             renderInput={(params) => <TextField {...params} label="Buscar por Categoría" />}
           />
         </Box>
@@ -381,7 +381,7 @@ const Products = () => {
       </Box>
       <Stack spacing={2} sx={{ marginTop: "50px" }}>
         <Pagination
-          count={count}             // Actualizado para reflejar el número correcto de páginas
+          count={count}       
           color='secondary'
           page={page}
           onChange={handleChange}

@@ -8,7 +8,7 @@ import Services from './containers/services/Services'
 import Products from './containers/products/Products'
 import Contact from './containers/contact/Contact'
 // import ProductList from './components/productList/ProductList'
-import Footer from './components/footer/Footer'
+// import Footer from './components/footer/Footer'
 
 function App() {
 

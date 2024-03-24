@@ -35,7 +35,7 @@ const Contact = () => {
       </Box>
       <Box sx={{display: {xs: "column", md:"flex"}, justifyContent:"center", alignItems:"center", width:"60vw", marginTop:"80px"}}>
         <Box sx={{width:"100%", display:"flex", justifyContent: "center"}}>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d107181.31301300947!2d-68.89016557997991!3d-32.91360482101907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1702040734321!5m2!1ses-419!2sar" width="100%" height="400" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3346.8018674087293!2d-68.77672812354295!3d-32.982628773578476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0d5d5a15eca7%3A0x3b781edfcc452d70!2sHuellitas%20(Peluqueria%20Canina%2C%20Petshop)!5e0!3m2!1ses-419!2sar!4v1711237701588!5m2!1ses-419!2sar" width="100%" height="400" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </Box>
         <Box sx={{width:"100%"}}>
         <Form/>
