@@ -1,7 +1,7 @@
 package com.example.huellitas.repository;
 
-import DigitalArco.Backend.domain.User;
-import DigitalArco.Backend.dto.UserUpdateCreatingProductDto;
+
+import com.example.huellitas.model.User;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -37,8 +37,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
     UserUpdateCreatingProductDto findUserToCreateProduct(@Param("userId") Long userId);
 */
 
-    @Query(value = "SELECT new DigitalArco.Backend.dto.UserUpdateCreatingProductDto(u.id, u.name, u.email, u.phone, l) FROM User u LEFT JOIN Location l ON u.location.id = l.id WHERE u.id = :userId", nativeQuery = false)
-    UserUpdateCreatingProductDto findUserToCreateProduct(@Param("userId") Long userId);
 
 
 }

@@ -1,8 +1,6 @@
 package com.example.huellitas.dto;
 
-import DigitalArco.Backend.domain.Color;
-import DigitalArco.Backend.domain.Image;
-import DigitalArco.Backend.domain.State;
+import com.example.huellitas.model.Image;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -23,8 +21,6 @@ public class ProductDto {
 
     private String description;
 
-    private State state;
-
     private List<Image> imageList;
 
     private LocalDate creationDate;
@@ -32,10 +28,6 @@ public class ProductDto {
     private Boolean isEnabled;
 
     private Boolean isFeatured;
-
-    private UserProductDto ownerUser;
-
-    private Color color;
 
     private Boolean isPublished;
 

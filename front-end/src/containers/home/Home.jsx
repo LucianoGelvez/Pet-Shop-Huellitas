@@ -17,6 +17,7 @@ import Discounts from '../../components/discounts/Discounts.jsx';
 import Comments from '../../components/comments/Comments.jsx';
 import Brands from '../../components/brands/Brands.jsx';
 import Footer from '../../components/footer/Footer.jsx';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -188,30 +189,31 @@ const Home = () => {
           fontWeight: "100",
 
         }}>
-          Comprar ahora</Button>
+          Comprar</Button>
       </Box>
       <Box className="container-home_accion" >
         <Box>
           <img src={DogFoot} alt="cad's foot" width="650px" height="450px" />
           <Box className="box-imag" sx={{ transform: "translate(150%, -200%)", gap: 5 }}>
-            <Typography variant='h4' fontWeight="800" className='h4'>Nutritious Dog Food</Typography>
-            <Button sx={{ bgcolor: "#ff6b35", color: 'white' }}>Comprar Ahora</Button>
+            <Typography variant='h4' fontWeight="800" className='h4'>Alimento de cantidad</Typography>
+            <Button sx={{ bgcolor: "#ff6b35", color: 'white' }}>Comprar</Button>
           </Box>
         </Box>
         <Box>
           <img src={CatFoot} alt="dog's foot" width="650px" height="450px" />
           <Box className="box-imag" sx={{ transform: 'translate(50%, -250%)' }}>
-            <Typography variant='h4' fontWeight="800">Nutritious Cat Food</Typography>
+            <Typography variant='h4' fontWeight="800">Nutrientes necesarios</Typography>
             <Button sx={{ bgcolor: "#ff6b35", color: 'white' }}>Comprar</Button>
           </Box>
         </Box>
       </Box>
 
       <Box width={"80%"} p={4} sx={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column", alignSelf: "center", textAlign: "center" }}>
-        <Typography component="h2" variant='h3' mb={5}> Food Categories</Typography>
+        <Typography component="h2" variant='h3' mb={5}> Tenemos Alimentos para:</Typography>
         <Grid container spacing={{ xs: 1, md: 6 }} columns={{ lg: 24, xs: 4, sm: 8, md: 16 }} sx={{ display: "flex", alignItems: "center", justifyContent: "center", width: "100%" }}>
           {Array.from(categories).slice(0, 6).map((item, id) => (
-            <Grid item xs={12} sm={4} md={4} key={id} sx={{ display: "flex", alignContent: "center", justifyContent: "center", flexDirection: "column", alignItems: "center", alignSelf: "center" }} >
+          
+           <Grid key={id} item xs={12} sm={4} md={4} sx={{ display: "flex", alignContent: "center", justifyContent: "center", flexDirection: "column", alignItems: "center", alignSelf: "center" }} >
               <Box bgcolor="#f36734" borderRadius={30} sx={{ width: "140px", height: "140px", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", alignContent: "center", margin: "auto", backgroundColor: "#f36734" }}>
                 <img src={item.image} />
               </Box>
@@ -226,8 +228,11 @@ const Home = () => {
 
         <Grid container spacing={{ xs: 1, md: 2 }} columns={{ xs: 4, sm: 8, md: 12 }}>
           {Array.from(products).slice(0, 6).map((product) => (
-            <Grid item xs={6} sm={4} md={4} key={product.id} sx={{ width: '40%' }}>
+            
+            <Grid key={product.id} item xs={6} sm={4} md={4}  sx={{ width: '40%' }}>
+               <Link style={{textDecoration: "none"}}  to={`/DetalleDeProducto/${product.id}`}>
               <MainCard image={product.image} name={product.name} value={product.value} price={product.price} size={product.size} />
+              </Link>
             </Grid>
           ))}
         </Grid>
@@ -238,7 +243,7 @@ const Home = () => {
       
       <Brands/>
       <Footer/>
-    </Box>
+    </Box >
   );
 };
 

@@ -1,15 +1,15 @@
 package com.example.huellitas.repository;
 
-import DigitalArco.Backend.domain.Product;
+import com.example.huellitas.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.NoRepositoryBean;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 /*Anotación que evita que se instancie el repository*/
-@NoRepositoryBean
-public interface ProductRepository<E extends Product, ID> extends JpaRepository<E, ID> {
+@Repository
+public interface ProductRepository extends JpaRepository<Product, Long> {
 
     // En tu repositorio
     @Query(value = "SELECT p.id, p.name, p.price, MIN(i.url) as unique_url, br.brand_name, l.province, l.department " +

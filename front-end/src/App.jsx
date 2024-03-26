@@ -7,6 +7,8 @@ import Home from './containers/home/Home'
 import Services from './containers/services/Services'
 import Products from './containers/products/Products'
 import Contact from './containers/contact/Contact'
+import ProductDetail from './containers/ProductDetail/ProductDetail'
+import ShoppingCart from './containers/shoppingCard/ShoppingCard'
 // import ProductList from './components/productList/ProductList'
 // import Footer from './components/footer/Footer'
 
@@ -32,6 +34,8 @@ function App() {
         <Route path='/Servicios' element={<Services />} />
         <Route path='/Productos' element={<Products />} />
         <Route path='/Contacto' element={<Contact />} />
+        <Route path='/DetalleDeProducto/:id' element={<ProductDetail />} />
+        <Route path='/Carrito' element={<ShoppingCart />} />
       </Routes>
     </BrowserRouter>
   )

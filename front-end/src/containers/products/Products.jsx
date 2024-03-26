@@ -4,6 +4,7 @@ import MainCard from '../../components/card/MainCard.jsx';
 import Footer from '../../components/footer/Footer.jsx';
 import { useState } from 'react';
 import banner from '../../images/pattern-bg.png';
+import { Link } from 'react-router-dom';
 
 const Products = () => {
 
@@ -14,7 +15,7 @@ const Products = () => {
       value: 4,
       image: wetCat,
       price: 679,
-      size: "1kg",
+      weight: 1,
       Nutrition: "Carbohydrates",
       type: "Dog Food",
       Avaliability: true,
@@ -28,7 +29,7 @@ const Products = () => {
       value: 5,
       image: wetCat,
       price: 732,
-      size: "2kg",
+      weight: 2,
       Nutrition: "Fats",
       type: "Dog Food",
       Avaliability: true,
@@ -42,7 +43,7 @@ const Products = () => {
       value: 4,
       image: wetCat,
       price: 850,
-      size: "1kg",
+      weight: 2,
       Nutrition: "Carbohydrates",
       type: "Dog Food",
       Avaliability: true,
@@ -56,7 +57,7 @@ const Products = () => {
       value: 3,
       image: wetCat,
       price: 760,
-      size: "2kg",
+      weight: 3,
       Nutrition: "Fats",
       type: "Cat Food",
       Avaliability: true,
@@ -70,7 +71,7 @@ const Products = () => {
       value: 3,
       image: wetCat,
       price: 690,
-      size: "2kg",
+      weight: "2kg",
       Nutrition: "Carbohydrates",
       type: "Cat Food",
       Avaliability: true,
@@ -84,7 +85,7 @@ const Products = () => {
       value: 5,
       image: wetCat,
       price: 850,
-      size: "1kg",
+      weight: 2,
       Nutrition: "Carbohydrates",
       type: "Dog Food",
       Avaliability: true,
@@ -98,7 +99,7 @@ const Products = () => {
       value: 5,
       image: wetCat,
       price: 729,
-      size: "2kg",
+      weight: 5,
       Nutrition: "Pet Shopper",
       type: "Dog Food",
       Avaliability: true,
@@ -111,7 +112,7 @@ const Products = () => {
       value: 5,
       image: wetCat,
       price: 729,
-      size: "2kg",
+      weight: 1,
       Nutrition: "Pet Shopper",
       type: "Dog Food",
       Avaliability: true,
@@ -124,7 +125,7 @@ const Products = () => {
       value: 5,
       image: wetCat,
       price: 729,
-      size: "2kg",
+      weight: 4,
       Nutrition: "Pet Shopper",
       type: "Dog Food",
       Avaliability: true,
@@ -137,7 +138,7 @@ const Products = () => {
       value: 5,
       image: wetCat,
       price: 729,
-      size: "2kg",
+      weight: "2kg",
       Nutrition: "Pet Shopper",
       type: "Dog Food",
       Avaliability: true,
@@ -147,11 +148,11 @@ const Products = () => {
 
     {
       id: 11,
-      name: "Webwwwwwwwwwwwwwwww Cat Food",
+      name: "Web Cat Food",
       value: 4,
       image: wetCat,
       price: 679,
-      size: "1kg",
+      weight: 4,
       Nutrition: "Carbohydrates",
       type: "Dog Food",
       Avaliability: true,
@@ -161,11 +162,11 @@ const Products = () => {
 
     {
       id: 12,
-      name: "Vegetwwwwwwwwwwwwwwwwarian Dog Feed",
+      name: "Vegetwwwarian Dog Feed",
       value: 5,
       image: wetCat,
       price: 732,
-      size: "2kg",
+      weight: 2,
       Nutrition: "Fats",
       type: "Dog Food",
       Avaliability: true,
@@ -179,7 +180,7 @@ const Products = () => {
       value: 4,
       image: wetCat,
       price: 850,
-      size: "1kg",
+      weight: 5,
       Nutrition: "Carbohydrates",
       type: "Dog Food",
       Avaliability: true,
@@ -193,7 +194,7 @@ const Products = () => {
       value: 3,
       image: wetCat,
       price: 760,
-      size: "2kg",
+      weight: 5,
       Nutrition: "Fats",
       type: "Cat Food",
       Avaliability: true,
@@ -207,7 +208,7 @@ const Products = () => {
       value: 3,
       image: wetCat,
       price: 690,
-      size: "2kg",
+      weight: 3,
       Nutrition: "Carbohydrates",
       type: "Cat Food",
       Avaliability: true,
@@ -221,7 +222,7 @@ const Products = () => {
       value: 5,
       image: wetCat,
       price: 850,
-      size: "1kg",
+      weight: 1,
       Nutrition: "Carbohydrates",
       type: "Dog Food",
       Avaliability: true,
@@ -235,7 +236,7 @@ const Products = () => {
       value: 5,
       image: wetCat,
       price: 729,
-      size: "2kg",
+      weight: 2,
       Nutrition: "Pet Shopper",
       type: "Dog Food",
       Avaliability: true,
@@ -248,7 +249,7 @@ const Products = () => {
       value: 5,
       image: wetCat,
       price: 729,
-      size: "2kg",
+      weight: 1,
       Nutrition: "Pet Shopper",
       type: "Dog Food",
       Avaliability: true,
@@ -261,7 +262,7 @@ const Products = () => {
       value: 5,
       image: wetCat,
       price: 729,
-      size: "2kg",
+      weight: 3,
       Nutrition: "Pet Shopper",
       type: "Dog Food",
       Avaliability: true,
@@ -270,11 +271,11 @@ const Products = () => {
     },
     {
       id: 20,
-      name: "Pup Boostaaaaaaaaaaaaaaaaaaaer",
+      name: "Pup Boostaer",
       value: 5,
       image: wetCat,
       price: 729,
-      size: "2kg",
+      weight: 3,
       Nutrition: "Pet Shopper",
       type: "Dog Food",
       Avaliability: true,
@@ -289,6 +290,15 @@ const Products = () => {
   const [search, setSearch] = useState("")
   const [minPrice, setMinPrice] = useState(0);
   const [maxPrice, setMaxPrice] = useState(Infinity);
+  const [minValue, setMinValue] = useState(0);
+  const [maxValue, setMaxValue] = useState(Infinity);
+  const [minWeight, setMinWeight] = useState(0);
+  const [maxWeight, setMaxWeight] = useState(Infinity);
+
+  const minProductValue = Math.min(...products.map(product => product.value));
+  const maxProductValue = Math.max(...products.map(product => product.value));
+  const minProductWeight = Math.min(...products.map(product => product.weight));
+  const maxProductWeight = Math.max(...products.map(product => product.weight));
 
   const minProductPrice = Math.min(...products.map(product => product.price));
   const maxProductPrice = Math.max(...products.map(product => product.price));
@@ -300,6 +310,16 @@ const Products = () => {
     setMaxPrice(newValue[1]);
     setPage(1);
   };
+  const handleValueChange = (event, newValue) => {
+    setMinValue(newValue[0]);
+    setMaxValue(newValue[1]);
+    setPage(1);
+  };
+  const handleWeightChange = (event, newValue) => {
+    setMinWeight(newValue[0]);
+    setMaxWeight(newValue[1]);
+    setPage(1);
+};
   const handleChange = (event, value) => {
     setPage(value);
   };
@@ -312,10 +332,14 @@ const Products = () => {
 
   // Modifica tu filtro para incluir el nuevo estado de `searchType`
   const filteredProducts = products.filter((product) =>
-    product.name.toLowerCase().includes(search.toLowerCase()) &&
-    product.price >= minPrice &&
-    product.price <= maxPrice
-  );
+  product.name.toLowerCase().includes(search.toLowerCase()) &&
+  product.price >= minPrice &&
+  product.price <= maxPrice &&
+  product.value >= minValue &&
+  product.value <= maxValue &&
+  product.weight >= minWeight &&
+  product.weight <= maxWeight
+);
 
   // Filtra por tipo solo si `searchType` no está vacío
   const filteredByType = searchType
@@ -337,11 +361,11 @@ const Products = () => {
 
   return (
     <Box sx={{ display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center" }}>
-    <Box sx={{ backgroundImage: `url(${banner})`, width: "100%", height: "300px", display: "flex", justifyContent: "center", alignItems: "center", mb: "80px", mt:"-60px" }}>
+      <Box sx={{ backgroundImage: `url(${banner})`, width: "100%", height: "300px", display: "flex", justifyContent: "center", alignItems: "center", mb: "80px", mt: "-60px" }}>
         <Typography component="h1" variant="h2" color="white" textAlign="center"> Nuestros Productos</Typography>
       </Box>
       <Box sx={{ width: "80vw", margin: "auto", display: "flex", justifyContent: "center", alignContent: "center", alignItems: { xs: "center", sm: "flex-start" }, flexDirection: { xs: "column", sm: "column", md: "column", lg: "column", xl: "row" } }}>
-        <Box sx={{ width: { sm: "50vw", lg:"30vw", xl: "30%"}, boxShadow: "2px 3px 5px -2px #000000;", display: "flex", flexDirection: "column", alignContent: "center", justifyContent: {xs:"center", sm:"center", xl: "flex-start"}, alignSelf:{sm:"center",md: "center", lg:"center", xl: "flex-start"}, mb:"50px" }}>
+        <Box sx={{ width: { sm: "50vw", lg: "30vw", xl: "30%" }, boxShadow: "2px 3px 5px -2px #000000;", display: "flex", flexDirection: "column", alignContent: "center", justifyContent: { xs: "center", sm: "center", xl: "flex-start" }, alignSelf: { sm: "center", md: "center", lg: "center", xl: "flex-start" }, mb: "50px" }}>
           <Typography id="range-slider" m="15px" gutterBottom>
             Filtrar por precio
           </Typography>
@@ -350,6 +374,30 @@ const Products = () => {
             max={maxProductPrice}
             value={[minPrice, maxPrice]}
             onChange={handlePriceChange}
+            valueLabelDisplay="auto"
+            aria-labelledby="range-slider"
+            sx={{ width: "90% ", margin: "auto", mb: 5 }}
+          />
+          <Typography id="range-slider" m="15px" gutterBottom>
+            Filtrar por valor
+          </Typography>
+          <Slider
+            min={minProductValue}
+            max={maxProductValue}
+            value={[minValue, maxValue]}
+            onChange={handleValueChange}
+            valueLabelDisplay="auto"
+            aria-labelledby="range-slider"
+            sx={{ width: "90% ", margin: "auto", mb: 5 }}
+          />
+          <Typography id="range-slider" m="15px" gutterBottom>
+            Filtrar por peso
+          </Typography>
+          <Slider
+            min={minProductWeight}
+            max={maxProductWeight}
+            value={[minWeight, maxWeight]}
+            onChange={handleWeightChange}
             valueLabelDisplay="auto"
             aria-labelledby="range-slider"
             sx={{ width: "90% ", margin: "auto", mb: 5 }}
@@ -364,31 +412,31 @@ const Products = () => {
           />
           <Autocomplete
             disablePortal
-            id="filter-by-type" 
-            options={[...new Set(products.map((product) => product.type))]} 
+            id="filter-by-type"
+            options={[...new Set(products.map((product) => product.type))]}
             sx={{ width: 300, margin: "auto", mb: 5 }}
-            onInputChange={handleTypeChange} 
+            onInputChange={handleTypeChange}
             renderInput={(params) => <TextField {...params} label="Buscar por Categoría" />}
           />
         </Box>
         <Grid container spacing={{ xs: 1, md: 2 }} sx={{ display: "flex", justifyContent: "center" }}>
           {currentProducts.map((product) => (
             <Grid item xs={12} sm={6} md={4} key={product.id}>
-              <MainCard image={product.image} name={product.name} value={product.value} price={product.price} size={product.size} />
+              <Link style={{ textDecoration: "none" }} to={`/DetalleDeProducto/${product.id}`}><MainCard image={product.image} name={product.name} value={product.value} price={product.price} weight={product.weight} /></Link>
             </Grid>
           ))}
         </Grid>
       </Box>
       <Stack spacing={2} sx={{ marginTop: "50px" }}>
         <Pagination
-          count={count}       
+          count={count}
           color='secondary'
           page={page}
           onChange={handleChange}
         />
 
       </Stack>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#232121" fill-opacity="1" d="M0,96L40,85.3C80,75,160,53,240,80C320,107,400,181,480,192C560,203,640,149,720,144C800,139,880,181,960,170.7C1040,160,1120,96,1200,64C1280,32,1360,32,1400,32L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#232121" d="M0,96L40,85.3C80,75,160,53,240,80C320,107,400,181,480,192C560,203,640,149,720,144C800,139,880,181,960,170.7C1040,160,1120,96,1200,64C1280,32,1360,32,1400,32L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
       <Footer />
     </Box>
   )

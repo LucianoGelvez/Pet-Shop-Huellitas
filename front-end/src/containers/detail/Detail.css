@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Monda&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Kanit:wght@500&family=Monda&display=swap");
+.detail {
+  margin-bottom: 100px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+}
+.detail .detail_seccionSuperior {
+  display: flex;
+}
+.detail .detail_seccionSuperior .thigsHidden {
+  display: none;
+}
+.detail .detail_seccionSuperior .detail_images {
+  display: flex;
+  justify-content: center;
+  padding: 0px 50px;
+}
+.detail .detail_seccionSuperior .detail_images .detail_images_vistaPrevia {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+.detail .detail_seccionSuperior .detail_images .detail_images_vistaPrevia img {
+  margin-top: 10px;
+  width: 80px;
+  cursor: pointer;
+}
+.detail .detail_seccionSuperior .detail_images .imageMagnifyer {
+  width: 600px;
+  height: 100% !important;
+  /*
+                      >div:first-child>div {
+                          border: 1px solid red;
+                          position: relative;
+                          top: 50%;
+                          transform: translateY(-50%);
+                      }
+
+                      .imageMagnifyer>div:first-child>img:first-child {
+                          border: 200px solid red;
+                          position: relative;
+                          top: 50%;
+                          transform: translateY(50%);
+                      }
+  */
+}
+.detail .detail_seccionSuperior .detail_images .imageMagnifyer .imagenAgrandada {
+  z-index: 100;
+}
+.detail .detail_seccionSuperior .detail_caracteristicas {
+  margin-top: 60px;
+}
+.detail .detail_seccionSuperior .detail_caracteristicas h4 {
+  text-align: start;
+}
+.detail .detail_seccionSuperior .detail_caracteristicas .detail_caracteristicasGrid {
+  margin-top: 10px;
+}
+.detail .detail_seccionSuperior .detail_caracteristicas .detail_caracteristicasGrid div {
+  text-align: start;
+}
+.detail .detail_seccionSuperior .detail_caracteristicas .detail_caracteristicasGrid div button {
+  font-size: 14px;
+  color: #333 !important;
+  text-align: left;
+}
+.detail .detail_seccionSuperior .detail_caracteristicas .detail_caracteristicasGrid div span {
+  width: 40px;
+  height: 40px;
+}
+.detail .detail_seccionSuperior .detail_caracteristicasExtra {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.detail .detail_seccionSuperior .detail_caracteristicasExtra .MuiGrid-item {
+  border-top-left-radius: 10px;
+}
+.detail .detail_seccionSuperior .detail_caracteristicasExtra .MuiGrid-item h5 {
+  text-align: start;
+}
+.detail .detail_seccionSuperior .detail_caracteristicasExtra .MuiGrid-item .MuiListItem-root {
+  width: 100%;
+  border: solid;
+  border-width: 1px;
+  border-color: #101A25;
+}
+.detail .detail_seccionSuperior .detail_caracteristicasExtra .MuiGrid-item .MuiListItem-root .MuiListItemText-root:nth-child(1) {
+  width: 65%;
+}
+.detail .detail_seccionSuperior .detail_caracteristicasExtra .MuiGrid-item .MuiListItem-root .MuiListItemText-root:nth-child(1) span {
+  text-align: start;
+}
+.detail .detail_seccionSuperior .detail_caracteristicasExtra .MuiGrid-item .MuiListItem-root .MuiListItemText-root:nth-child(2) {
+  width: 35%;
+}
+.detail .detail_seccionSuperior .detail_caracteristicasExtra .MuiGrid-item .MuiListItem-root .MuiListItemText-root:nth-child(2) span {
+  text-align: start;
+  font-weight: 700;
+}
+.detail .detail_seccionSuperior .detail_caracteristicasExtra .MuiGrid-item .MuiListItem-root:nth-child(odd) {
+  background-color: #101A25;
+}
+.detail .detail_seccionSuperior .detail_caracteristicasExtra .MuiGrid-item .MuiListItem-root:nth-child(odd) .MuiListItemText-root:nth-child(1) span {
+  color: white;
+}
+.detail .detail_seccionSuperior .detail_caracteristicasExtra .MuiGrid-item .MuiListItem-root:nth-child(odd) .MuiListItemText-root:nth-child(2) span {
+  color: white;
+}
+.detail .detail_seccionSuperior .detail_caracteristicasExtra .MuiGrid-item .MuiListItem-root:nth-child(even) .MuiListItemText-root:nth-child(1) span {
+  color: #101A25;
+}
+.detail .detail_seccionSuperior .detail_caracteristicasExtra .MuiGrid-item .MuiListItem-root:nth-child(even) .MuiListItemText-root:nth-child(2) span {
+  color: #101A25;
+}
+.detail .detail_seccionSuperior .detail_caracteristicasExtra .MuiGrid-item .MuiListItem-root:nth-child(1) {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.detail .detail_seccionSuperior .detail_caracteristicasExtra .MuiGrid-item .MuiListItem-root:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.detail .detail_seccionSuperior .detail_caracteristicasExtra .MuiGrid-item .MuiListItemText-root span {
+  font-size: 14px !important;
+}
+.detail .detail_seccionSuperior .detail_descripcion {
+  font-weight: 400;
+}
+
+.detail_infoPrincipalProducto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.detail_infoPrincipalProducto .detail_infoPrincipalProductoTitulo {
+  background-color: white;
+  width: 100%;
+  color: black;
+}
+.detail_infoPrincipalProducto .detail_infoPrincipalProductoPrecio {
+  color: #FF9C00;
+  width: 100%;
+  margin-top: 10px;
+}/*# sourceMappingURL=Detail.css.map */

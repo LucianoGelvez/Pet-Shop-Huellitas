@@ -1,0 +1,222 @@
+@import "../../utils/styles/colors";
+@import "../../utils/styles/fonts";
+
+.detail {
+    margin-bottom: 100px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+
+    .detail_seccionSuperior {
+        display: flex;
+
+
+          .thigsHidden {
+                display: none;
+            }
+
+            .detail_images {
+                display: flex;
+                justify-content: center;
+                padding: 0px 50px;
+            
+
+                .detail_images_vistaPrevia {
+                    display: flex;
+                    flex-direction: column;
+                    margin-right: 10px;
+
+                    img {
+                        margin-top: 10px;
+                        width: 80px;
+                        cursor: pointer;
+
+                    }
+
+                }
+
+                .imageMagnifyer {
+                    width: 600px;
+                    height: 100% !important;
+                    /*
+                    >div:first-child>div {
+                        border: 1px solid red;
+                        position: relative;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+
+                    .imageMagnifyer>div:first-child>img:first-child {
+                        border: 200px solid red;
+                        position: relative;
+                        top: 50%;
+                        transform: translateY(50%);
+                    }
+*/
+
+                    .imagenAgrandada {
+                        z-index: 100;
+
+                    }
+                }
+            }
+
+            .detail_caracteristicas {
+                margin-top: 60px;
+
+                h4 {
+                    text-align: start;
+                }
+
+                .detail_caracteristicasGrid {
+                    margin-top: 10px;
+
+                    div {
+                        text-align: start;
+             
+
+                        button {
+                            font-size: 14px;
+                            color: #333 !important;
+                            text-align: left;
+
+                        }
+
+                        span {
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+
+            .detail_caracteristicasExtra {
+
+                margin-top: 30px;
+                margin-bottom: 30px;
+
+                .MuiGrid-item {
+                    border-top-left-radius: 10px;
+
+                    h5 {
+                        text-align: start;
+                    }
+
+                    .MuiListItem-root {
+                        width: 100%;
+                        border: solid;
+                        border-width: 1px;
+                        border-color: $blue;
+
+                        .MuiListItemText-root:nth-child(1) {
+                            width: 65%;
+
+                            span {
+                                text-align: start;
+                                
+                            }
+                        }
+
+                        .MuiListItemText-root:nth-child(2) {
+                            width: 35%;
+
+                            span {
+                                text-align: start;
+                                font-weight: 700;
+                            
+                            }
+
+
+                        }
+
+                    }
+
+                    .MuiListItem-root:nth-child(odd)
+                    {
+                     background-color: $blue;
+                        .MuiListItemText-root:nth-child(1) {
+
+                            span {
+                                color: white;
+                            }
+                        }
+                        .MuiListItemText-root:nth-child(2) {
+                     
+                            span {
+                            color: white;
+                            }
+
+
+                        }
+                    }
+
+                    .MuiListItem-root:nth-child(even)
+                    {
+                        .MuiListItemText-root:nth-child(1) {
+                            
+
+                            span {
+                                color: $blue;
+                            }
+                        }
+                        .MuiListItemText-root:nth-child(2) {
+                     
+                            span {
+                            color: $blue;
+                            }
+
+
+                        }
+                    }
+
+                    .MuiListItem-root:nth-child(1) {
+                        border-top-left-radius: 5px;
+                        border-top-right-radius: 5px;
+                    }
+
+                    .MuiListItem-root:last-child {
+                        border-bottom-left-radius: 5px;
+                        border-bottom-right-radius: 5px;
+
+                    }
+
+                    .MuiListItemText-root {
+
+                        span {
+                            font-size: 14px !important;
+                        }
+                    }
+                }
+            }
+
+            .detail_descripcion {
+                font-weight: 400;
+            }
+
+    }
+
+}
+
+.detail_infoPrincipalProducto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+  
+    .detail_infoPrincipalProductoTitulo {
+        // font-size: 32px;
+        background-color: white;
+        width: 100%;
+        color: black ;
+    }
+    
+    .detail_infoPrincipalProductoPrecio {
+        color: $orange;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+}
+
+

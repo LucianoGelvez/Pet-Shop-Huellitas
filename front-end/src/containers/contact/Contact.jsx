@@ -3,7 +3,7 @@ import banner from '../../images/pattern-bg.png';
 import email from '../../images/icons/email-contact.png';
 import phone from '../../images/icons/phone-contact.png';
 import adress from '../../images/icons/adress.png';
-import { Formik } from "formik";
+// import { Formik } from "formik";
 import Form from "../../components/form/Form";
 import Footer from "../../components/footer/Footer";
 

@@ -5,8 +5,16 @@ import Cat from '../../images/cat.webp'
 import Chameleon from '../../images/chameleon.webp'
 import './SliderStyle.css'
 import { Box, Button, Typography } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const Slider = () => {
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+      navigate('/Productos');
+  };
+
   return (
       <Carousel
         autoPlay
@@ -24,7 +32,7 @@ const Slider = () => {
           <Box className="carousel-item-content description1">
             <Typography variant='h1'>Veterinaria Huellitas</Typography>
             <Typography variant='h4'>Descripción del slide</Typography>
-            <Button>Comprar ahora</Button>
+            <Button sx={{color:"white"}} onClick={handleClick}>Comprar ahora</Button>
           </Box>
         </Box>
         <Box className="carousel-item ">
@@ -32,7 +40,7 @@ const Slider = () => {
           <Box className="carousel-item-content description2">
             <Typography variant='h1'>Veterinaria Huellitas</Typography>
             <Typography variant='h4'>Haz que crezca fuerte y saludable.</Typography>
-            <Button>Comprar ahora</Button>
+            <Button sx={{color:"white"}} onClick={handleClick}>Comprar ahora</Button>
           </Box>
         </Box>
         <Box className="carousel-item ">
@@ -40,7 +48,7 @@ const Slider = () => {
           <Box className="carousel-item-content description3">
             <Typography variant='h1' className='titulo'>Veterinaria Huellitas</Typography>
             <Typography variant='h4' className='sentence'>Nos ocupamos del bienestar de tu mascota</Typography>
-            <Button className='button'>Comprar ahora</Button>
+            <Button sx={{color:"white"}} onClick={handleClick}>Comprar ahora</Button>
           </Box>
         </Box>
       </Carousel>

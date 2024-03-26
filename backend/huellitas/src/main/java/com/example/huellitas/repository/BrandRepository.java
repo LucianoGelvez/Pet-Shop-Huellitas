@@ -1,6 +1,6 @@
 package com.example.huellitas.repository;
 
-import DigitalArco.Backend.domain.Brand;
+import com.example.huellitas.model.Brand;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
